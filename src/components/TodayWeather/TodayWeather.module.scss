@@ -1,0 +1,51 @@
+.weather {
+  &Box {
+    background-color: #0d0045;
+    width: 300px;
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    box-shadow: 3px -7px 24px 0px rgba(66, 68, 90, 1);
+  }
+  &CityName {
+    font-size: 10px;
+    color: #a3a3a3;
+    font-weight: 300;
+  }
+  &Temp {
+    font-size: 45px;
+    margin: 0;
+    color: #fff;
+  }
+  &Temperatures {
+    display: flex;
+  }
+  &MinTemp {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  &MaxTemp {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  &TempLabel {
+    color: #a3a3a3;
+    font-size: 10px;
+    margin: 0;
+  }
+  &TempValue {
+    color: #fff;
+    margin: 10px 0;
+  }
+  &Line {
+    width: 1px;
+    background-color: #8484842d;
+    border-radius: 100%;
+  }
+}

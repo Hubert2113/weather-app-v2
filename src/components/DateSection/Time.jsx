@@ -7,9 +7,9 @@ const Time = () => {
   const dispatch = useDispatch();
   const unixTime = useSelector((state) => state.utility.date);
   const cityData = useSelector((state) => state.weatherData.data.city);
-  //   setInterval(() => {
-  //     dispatch(updateTime(Date.now()));
-  //   }, 1000);
+    setInterval(() => {
+      dispatch(updateTime(Date.now()));
+    }, 1000);
 
   const date = new Date(unixTime);
   const day = date.getDate();
@@ -41,15 +41,22 @@ const Time = () => {
         <sup>th</sup> {weekday}
       </h3>
       <div className={styles.dateBoxDetails}>
-        <p style={{borderRight: 'solid 1px #9d9d9d71'}} className={styles.dateBoxDetail}>{month}</p>
+        <p
+          style={{ borderRight: 'solid 1px #9d9d9d71' }}
+          className={styles.dateBoxDetail}
+        >
+          {month}
+        </p>
         <p className={styles.dateBoxDetail}>
-          {/* {hours < 10 && 0}
+          {hours < 10 && 0}
           {hours}:{minutes < 10 && 0}
           {minutes}:{seconds < 10 && 0}
-        {seconds} */}
-          10:10:10
+          {seconds}
         </p>
-        <div style={{borderRight: 'solid 1px #9d9d9d71'}} className={styles.dateBoxDetailBox}>
+        <div
+          style={{ borderRight: 'solid 1px #9d9d9d71' }}
+          className={styles.dateBoxDetailBox}
+        >
           <Sunrise />
           <p className={styles.dateBoxDetail}>
             {getSunTiming(new Date(cityData?.sunrise * 1000))}
